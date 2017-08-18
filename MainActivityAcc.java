@@ -7,13 +7,13 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorManager;
 import android.widget.*;
-import android.view.*;
-import android.app.Activity;
+import android.view.*; 
+//import android.app.Activity; // might not need this line ***********************************************
 import android.content.res.Resources;
-import android.os.Bundle;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.Button;
+//import android.os.Bundle; // might not need this line ***********************************************
+//import android.view.View; // might not need this line ***********************************************
+//import android.view.WindowManager; // might not need this line ***********************************************
+//import android.widget.Button; // might not need this line ***********************************************
 
 import com.mycompany.myapp.PieChart;
 
@@ -52,12 +52,13 @@ public class MainActivity extends Activity implements SensorEventListener
         pie.addItem("Euripides", 1, res.getColor(R.color.turquoise));
         pie.addItem("Ganymede", 3, res.getColor(R.color.slate));
 
+        // This sets onClickListener for Button without declaring the button as a object in the code.
         ((Button) findViewById(R.id.Reset)).setOnClickListener(new View.OnClickListener() {
                 public void onClick(View view) {
                     pie.setCurrentItem(0);
                 }
-            });
-            */
+        });
+        */
     }
        
     
